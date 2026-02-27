@@ -1,0 +1,22 @@
+{
+  "name": "gmail-filters-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for managing Gmail filters and labels",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild index.ts auth.ts --bundle --platform=node --outdir=dist --format=cjs --external:googleapis --external:@modelcontextprotocol/sdk --external:zod",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "auth": "node dist/auth.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "googleapis": "^144.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.27.3",
+    "typescript": "^5.0.0"
+  }
+}
