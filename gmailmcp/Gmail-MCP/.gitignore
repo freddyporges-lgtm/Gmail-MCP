@@ -1,0 +1,15 @@
+# Environment variables - NEVER commit credentials
+.env
+.env.local
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log

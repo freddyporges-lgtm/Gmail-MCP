@@ -1,0 +1,112 @@
+[
+  {
+    "name": "⚡ Priority - Family VIPs",
+    "description": "Emails from immediate family and close personal contacts. Always stays unread so nothing is missed.",
+    "criteria": {
+      "query": "from:@family-domain.com OR from:close-contact@example.com"
+    },
+    "action": {
+      "addLabel": "⚡ Priority",
+      "markAsRead": false
+    }
+  },
+  {
+    "name": "⚡ Priority - Top Professional Contacts",
+    "description": "Identified by analyzing sent mail frequency over the past 12 months. Top 8 non-family contacts by email volume.",
+    "criteria": {
+      "query": "from:top-contact-1@example.com OR from:top-contact-2@example.com"
+    },
+    "action": {
+      "addLabel": "⚡ Priority",
+      "markAsRead": false
+    }
+  },
+  {
+    "name": "💼 Work/Career",
+    "description": "Work domain, LinkedIn, and recruiter emails. Kept unread as potentially actionable.",
+    "criteria": {
+      "query": "from:@yourcompany.com OR from:linkedin.com OR subject:recruiter OR subject:'job opportunity'"
+    },
+    "action": {
+      "addLabel": "💼 Work/Career",
+      "markAsRead": false
+    }
+  },
+  {
+    "name": "💰 Finance",
+    "description": "Banks, financial institutions, payment confirmations. Marked as read — surfaced in daily triage if action needed.",
+    "criteria": {
+      "query": "from:chase.com OR from:ally.com OR from:etradefinancial.com OR from:ubs.com OR subject:'account statement' OR subject:'payment confirmation'"
+    },
+    "action": {
+      "addLabel": "💰 Finance",
+      "markAsRead": true
+    }
+  },
+  {
+    "name": "📰 Newsletters - Ad Tech",
+    "description": "Ad tech and media industry newsletters. Marked as read — consumed via daily morning digest.",
+    "criteria": {
+      "query": "from:adexchanger.com OR from:digiday.com OR from:adweek.com OR from:marketingbrew.com OR from:emarketer.com"
+    },
+    "action": {
+      "addLabel": "📰 Newsletters",
+      "markAsRead": true
+    }
+  },
+  {
+    "name": "📰 Newsletters - General News + Catch-All",
+    "description": "Major news publications plus anything containing 'unsubscribe' as a catch-all. Marked as read — consumed via daily morning digest.",
+    "criteria": {
+      "query": "from:nytimes.com OR from:wsj.com OR from:semafor.com OR from:axios.com OR from:substack.com OR unsubscribe"
+    },
+    "action": {
+      "addLabel": "📰 Newsletters",
+      "markAsRead": true
+    }
+  },
+  {
+    "name": "🏠 Local",
+    "description": "NYC local news and neighborhood updates (Nextdoor, Gothamist, etc.).",
+    "criteria": {
+      "query": "from:nextdoor.com OR from:email.nextdoor.com OR from:gothamist.com OR from:ny1.com OR from:timeout.com"
+    },
+    "action": {
+      "addLabel": "🏠 Local",
+      "markAsRead": false
+    }
+  },
+  {
+    "name": "🔔 Alerts",
+    "description": "Security alerts, sign-in notifications, 2FA codes. Marked as read — reduces noise while keeping them findable.",
+    "criteria": {
+      "query": "subject:'security alert' OR subject:'unusual activity' OR subject:'new sign-in' OR subject:'verification code' OR subject:2FA"
+    },
+    "action": {
+      "addLabel": "🔔 Alerts",
+      "markAsRead": true
+    }
+  },
+  {
+    "name": "🛒 Orders",
+    "description": "Order confirmations, shipping, and delivery notifications. Marked as read — easy to look up when needed.",
+    "criteria": {
+      "query": "subject:'order confirmation' OR subject:'order shipped' OR subject:'tracking number' OR from:amazon.com OR from:ups.com OR from:fedex.com"
+    },
+    "action": {
+      "addLabel": "🛒 Orders",
+      "markAsRead": true
+    }
+  },
+  {
+    "name": "🔧 Dev Tools",
+    "description": "Developer platform notifications — GitHub, Vercel, Netlify, Supabase, Datadog, etc.",
+    "criteria": {
+      "query": "from:github.com OR from:vercel.com OR from:netlify.com OR from:supabase.com OR from:cloudflare.com OR from:datadog.com"
+    },
+    "action": {
+      "addLabel": "🔧 Dev Tools",
+      "markAsRead": false
+    }
+  }
+]
