@@ -1,0 +1,48 @@
+# ===== Google API Credentials & OAuth Tokens =====
+credentials.json
+client_secret*.json
+service_account*.json
+oauth*.json
+token.json
+token.pickle
+*.pickle
+
+# ===== Environment & Secret Files =====
+.env
+.env.*
+*.env
+secrets.json
+config.local.*
+
+# ===== Keys & Certificates =====
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+*.egg
+
+# ===== Node.js =====
+node_modules/
+package-lock.json
+yarn.lock
+.next/
+
+# ===== IDE & OS =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
